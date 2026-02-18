@@ -6,6 +6,9 @@ Works with YouTube and any Chromium-based browser via a lightweight local bridge
 
 ---
 
+[⬇ Download Latest Release](https://github.com/veitorman/NowPlayingUniversal/releases)
+
+
 ## ✨ Features
 
 - 🟢 Real alpha transparency (no chroma required) (It can be used as a chroma changing "alpha" to "chroma" on config.js)
