@@ -1,0 +1,92 @@
+<Window x:Class="NowPlayingUniversal.ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Overlay Settings"
+        Width="420"
+        Height="650"
+        WindowStartupLocation="CenterOwner">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<StackPanel Margin="20">
+
+			<!-- Monitor -->
+			<TextBlock Text="Monitor" Margin="0,0,0,5"/>
+			<ComboBox x:Name="MonitorBox"/>
+
+			<!-- SKINS -->
+			<TextBlock Text="Skin Preset" Margin="0,10,0,5"/>
+			<ComboBox x:Name="SkinBox" SelectionChanged="SkinBox_SelectionChanged">
+				<ComboBoxItem Content="Squared Black"/>
+				<ComboBoxItem Content="Rounded Black"/>
+				<ComboBoxItem Content="Squared White"/>
+				<ComboBoxItem Content="Rounded White"/>
+
+				<ComboBoxItem Content="Ice White"/>
+				<ComboBoxItem Content="White Red Accent"/>
+				<ComboBoxItem Content="White Blue Accent"/>
+
+				<ComboBoxItem Content="Black Red Neon"/>
+				<ComboBoxItem Content="Black Violet Neon"/>
+				<ComboBoxItem Content="Black Orange Neon"/>
+			</ComboBox>
+
+			<!-- Position -->
+			<TextBlock Text="Position" Margin="0,15,0,5"/>
+			<ComboBox x:Name="PositionBox">
+				<ComboBoxItem Content="TopLeft"/>
+				<ComboBoxItem Content="TopRight"/>
+				<ComboBoxItem Content="BottomLeft"/>
+				<ComboBoxItem Content="BottomRight"/>
+			</ComboBox>
+
+			<!-- Animation Direction -->
+			<TextBlock Text="Window Animation" Margin="0,15,0,5"/>
+			<ComboBox x:Name="AnimationBox">
+				<ComboBoxItem Content="Left"/>
+				<ComboBoxItem Content="Right"/>
+				<ComboBoxItem Content="Up"/>
+				<ComboBoxItem Content="Down"/>
+			</ComboBox>
+
+			<!-- Background Color -->
+			<TextBlock Text="Background Color" Margin="0,15,0,5"/>
+			<Button x:Name="BgColorButton" Height="30" Click="BgColor_Click"/>
+
+			<!-- Glow Color - Intensity -->
+			<TextBlock Text="Glow Color" Margin="0,15,0,5"/>
+			<Button x:Name="GlowColorButton" Height="30" Click="GlowColor_Click"/>
+			<TextBlock Text="Glow Intensity (px)" Margin="0,15,0,5"/>
+			<TextBox x:Name="GlowBox"/>
+
+			<!-- Background Radius -->			
+			<TextBlock Text="Background Radius (px)" Margin="0,15,0,5"/>
+			<TextBox x:Name="BgRadiusBox"/>
+			<!-- Cover Art Radius -->
+			<TextBlock Text="Cover Radius (px)" Margin="0,15,0,5"/>
+			<TextBox x:Name="CoverRadiusBox"/>
+
+
+			<!-- Text Color -->
+			<TextBlock Text="Text Color" Margin="0,15,0,5"/>
+			<Button x:Name="TextColorButton" Height="30" Click="TextColor_Click"/>
+
+			<!-- Visible Seconds -->
+			<TextBlock Text="Visible Seconds" Margin="0,15,0,5"/>
+			<TextBox x:Name="SecondsBox"/>
+
+			<!-- Background Opacity -->
+			<TextBlock Text="Background Opacity (0-1)" Margin="0,15,0,5"/>
+			<Slider x:Name="OpacitySlider"
+                    Minimum="0"
+                    Maximum="1"
+                    SmallChange="0.05"
+                    LargeChange="0.1"/>
+
+			<Button Content="Save"
+                    Margin="0,25,0,0"
+                    Height="35"
+                    Click="Save_Click"/>
+
+		</StackPanel>
+	</ScrollViewer>
+</Window>
