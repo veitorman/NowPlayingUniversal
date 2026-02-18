@@ -1,3 +1,5 @@
+![Preview](HEADER.png)
+
 🎵 NowPlayingUniversal
 
 Minimal, customizable "Now Playing" overlay for streamers, podcasters and radio setups.
